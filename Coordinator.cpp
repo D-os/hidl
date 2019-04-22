@@ -26,6 +26,7 @@
 #include <hidl-hash/Hash.h>
 #include <hidl-util/StringHelper.h>
 #include <iostream>
+#include <cstring>
 
 #include "AST.h"
 #include "Interface.h"
