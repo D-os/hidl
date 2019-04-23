@@ -17,6 +17,7 @@
 #include "EnumType.h"
 
 #include <hidl-util/Formatter.h>
+#include <algorithm>
 #include <inttypes.h>
 #include <iostream>
 #include <unordered_map>

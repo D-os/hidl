@@ -23,6 +23,7 @@
 #include <hidl-util/FQName.h>
 #include <hidl-util/Formatter.h>
 #include <hidl-util/StringHelper.h>
+#include <algorithm>
 #include <cstring>
 #include <stdio.h>
 #include <sys/stat.h>
