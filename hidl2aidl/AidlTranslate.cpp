@@ -352,9 +352,10 @@ static void simpleTranslation(Formatter& out, const FieldWithVersion& field,
         } else {
             inputAccess += "()";
             h2aScalarChecks(out, field.field->type(), inputAccess, backend);
-            out << "*out = "
+            out << "out->set<" << aidlTypePackage(*parent, backend) << "::" << field.fullName
+                << ">("
                 << wrapCppSource(inputAccess, field.field->type(), parent->fqName(), backend)
-                << ";\n";
+                << ");\n";
         }
     }
 }

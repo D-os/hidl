@@ -272,6 +272,15 @@ public class TranslateJavaTest {
     }
 
     @Test
+    public void SafeUnionBarRepeatedFloat() {
+        hidl2aidl.test.SafeUnionBar dest;
+        hidl2aidl.test.V1_2.SafeUnionBar source = new hidl2aidl.test.V1_2.SafeUnionBar();
+        source.m(3.5f);
+        dest = Translate.h2aTranslate(source);
+        assertThat(source.m(), is(dest.getM()));
+    }
+
+    @Test
     public void ArrayFoo() {
         hidl2aidl.test.ArrayFoo dest;
         hidl2aidl.test.V1_2.ArrayFoo source = new hidl2aidl.test.V1_2.ArrayFoo();

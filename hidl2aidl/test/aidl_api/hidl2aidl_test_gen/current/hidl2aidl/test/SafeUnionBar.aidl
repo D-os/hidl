@@ -34,4 +34,5 @@ union SafeUnionBar {
   byte[] j;
   hidl2aidl.test.Value[] k;
   byte[] l;
+  float m;
 }
